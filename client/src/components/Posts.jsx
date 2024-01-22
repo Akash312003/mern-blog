@@ -9,7 +9,7 @@ import Thumbnail4 from '../images/blog4.jpg'
 const DUMMY__POSTS =[
   {
     id: '1',
-    Thumbnail: Thumbnail1,
+    thumbnail: Thumbnail1,
     category: 'education',
     title: 'This is the title of the very first post in this blog',
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, inventore atque illum vel corporis quia ipsum quo laboriosam culpa impedit?",
@@ -17,7 +17,7 @@ const DUMMY__POSTS =[
   },
   {
     id: '2',
-    Thumbnail: Thumbnail2,
+    thumbnail: Thumbnail2,
     category: 'science',
     title: 'This is the title of the very first post in this blog',
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, inventore atque illum vel corporis quia ipsum quo laboriosam culpa impedit?",
@@ -25,7 +25,7 @@ const DUMMY__POSTS =[
   },
   {
     id: '3',
-    Thumbnail: Thumbnail3,
+    thumbnail: Thumbnail3,
     category: 'weather',
     title: 'This is the title of the very first post in this blog',
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, inventore atque illum vel corporis quia ipsum quo laboriosam culpa impedit?",
@@ -33,7 +33,7 @@ const DUMMY__POSTS =[
   },
   {
     id: '4',
-    Thumbnail: Thumbnail4,
+    thumbnail: Thumbnail4,
     category: 'farming',
     title: 'This is the title of the very first post in this blog',
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, inventore atque illum vel corporis quia ipsum quo laboriosam culpa impedit?",
@@ -47,11 +47,13 @@ const Posts = () => {
   const [posts, setPosts] = useState(DUMMY__POSTS)
   return (
    <section className='posts'>
+    <div className="container posts__container">
     {
-      posts.map(({id, thumbnail, category, title, description, authorID}) =>
+      posts.map(({id, thumbnail, category, title,desc, authorID}) =>
        <PostItem key={id} postID={id} thumbnail={thumbnail} category={category} title={title} 
-       description={description} authorID={authorID}/>)
+       description={desc} authorID={authorID}/>)
     }
+    </div>
    </section>
   )
 }

@@ -34,17 +34,19 @@
   outline:0;
   box-sizing: border-box;
 }
-img{
-    display: block;
-    object-fit: cover;
-    width: 70%;
-}
+
   body{
     font-family: "Poppins", sans-serif;
     background: var(--color-bg);
     font-size: 0.9rem;
     line-height: 1.6;
     color: var(--color-gray-700);
+}
+
+img{
+  display: block;
+  object-fit: cover;
+  width: 100%;
 }
 
 a{
@@ -81,11 +83,7 @@ h5{
 }
 
 
- img{
-    display: block;
-    object-fit: cover;
-    width: 70%;
-}
+ 
 section{
   margin-top: 6rem;
 }
@@ -228,4 +226,56 @@ margin-bottom: 4rem;
   padding: 1rem;
   color: var(--color-white);
   font-weight: 300;
+}
+
+.posts__container{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 4rem;
+
+}
+
+.post{
+  background-color: var(--color-white);
+  padding: 1rem;
+  border-radius: var(--radius-4);
+  padding-bottom: 2rem;
+  transition: var(--transition);
+  cursor: default;
+}
+
+.post:hover{
+box-shadow: 0 1.5rem 2rem rgba(0, 0,0, 0.1);
+}
+
+.post__thumbnail{
+  border-radius: var(--radius-3);
+  overflow: hidden;
+  height: 16rem;
+}
+.posts__content{
+  margin-top: 1.5rem;
+}
+
+.posts__content h3{
+  margin: 1rem 0 0.6rem;
+}
+
+.post__footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 2rem;
+}
+
+.post__author{
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.post__author-avatar{
+  width: 2.5rem;
+  aspect-ratio: 1/1;
+  border-radius: var(--radius-2);
+  overflow: hidden;
 }
