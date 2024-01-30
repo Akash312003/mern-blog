@@ -228,6 +228,9 @@ margin-bottom: 4rem;
   font-weight: 300;
 }
 
+
+
+
 .posts__container{
   display: grid;
   grid-template-columns: repeat(3,1fr);
@@ -279,3 +282,85 @@ box-shadow: 0 1.5rem 2rem rgba(0, 0,0, 0.1);
   border-radius: var(--radius-2);
   overflow: hidden;
 }
+
+
+
+
+.post-detail{
+  width: var(--form-width);
+  background: var(--color-white);
+  margin-inline: auto;
+  padding: 2rem 0 ;
+}
+
+
+.post-detail__header{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.post-detail__buttons{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.post-detail__thumbnail{
+  margin: 1rem 0;
+  height: fit-content;
+  max-height: 30rem;
+  overflow: hidden;
+}
+
+.post-detail p{
+  margin-bottom: 0.7rem;
+}
+
+
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+input, select, textarea{
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-1);
+  resize: none;
+}
+
+.form__error-message{
+  background: var(--color-red);
+  color: var(--color-white);
+  font-size: 0.8rem;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-1);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.register, .login, .create-post{
+  width: var(--form-width);
+  margin-inline: auto;
+  height: calc(100vh - 12rem);
+  display: grid;
+  place-items: center;
+}
+
+.register h2, .login h2, .create-post h2{
+  margin-bottom: 2rem;
+}
+
+.register small,.login small{
+  display: block;
+  margin-top: 1.5rem;
+
+}
+
+.register small a ,.login small a {
+  color: var(--color-primary);
+
+}
+
+
