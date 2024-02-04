@@ -364,6 +364,17 @@ input, select, textarea{
 }
 
 
+
+.ql-editor{
+  overflow: scroll ;
+  background: var(--color-white);
+  height: 10rem !important;
+}
+
+
+
+/*----------------------authors---------------------*/
+
 .authors__container{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -427,7 +438,7 @@ input, select, textarea{
 .avatar__form label, .profile__avatar-btn{
   background: var(--color-gray-900);
   color: var(--color-white);
-  font-size: 1rem;
+  font-size: 1.3rem;
   position: absolute;
   right: 2rem;
   bottom: 1.4rem;
@@ -441,7 +452,7 @@ input, select, textarea{
 .profile__avatar-btn{
   cursor: pointer;
   padding: 0;
-  font-size: 1.3rem;
+  
   background: var(--color-primary);
 }
 
@@ -453,4 +464,173 @@ input, select, textarea{
   margin-top: 3rem;
   margin-inline: auto;
   width: var(--form-width);
+}
+
+
+
+/*---------------------dashboard------------------------*/
+
+.dashboard__container{
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.dashboard__post{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: var(--color-white);
+  padding: 0.5rem 1.2rem;
+  border-radius: var(--radius-3);
+}
+
+.dashboard__post-info{
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  align-items: center;
+}
+
+.dashboard__post-thumbnail{
+  width: 4rem;
+  border-radius: var(--radius-1);
+  overflow: hidden;
+}
+
+.dashboard__post-actions{
+  display: flex;
+  gap: 1rem;
+}
+
+
+
+
+
+
+/*--------------------------------media queries--------------------------*/
+
+@media screen and (max-width: 800px) {
+  h1{
+    font-size: 1.7rem;
+  }
+
+  h2{
+    font-size: 1.6rem;
+  }
+  h3{
+    font-size: 1.35rem;
+  }
+  
+  .container {
+    width: var(--container-width-md);
+  }
+
+  /*navbar*/
+  .nav__container{
+    position: relative;
+  }
+
+  .nav__menu{
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav__menu li {
+    width: 100%;
+    box-shadow: -2rem 4rem 4rem rgba(0,0,0,0.26);
+    animation: dropDown 500ms ease forwards;
+    opacity: 0;
+    transform: rotatex(90deg);
+    transform-origin: top;
+    
+  }
+
+  
+
+
+
+  @keyframes dropDown {
+    to {
+      opacity: 1;
+      transform: rotateX(0);
+    }
+    
+  }
+  .nav__menu li:nth-child(2){
+    animation-delay: 300ms;
+  }
+
+ .nav__menu li:nth-child(3){
+  animation-delay: 600ms;
+ }
+
+ .nav__menu li:nth-child(4){
+  animation-delay: 900ms;
+ }
+
+
+ .nav__menu li a{
+  display: block;
+  background: var(--color-white);
+  padding: 0.85rem 2.5rem;
+}
+
+  
+
+  .nav__toggle-btn{
+    display: inline-block;
+    background: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+
+
+  .posts__container{
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .footer__categories{
+    flex-direction: column;
+  }
+.post-detail{
+  width: 100%;
+  background: transparent;
+  padding: 0;
+}
+
+
+
+.register , .login, .create-post{
+  width: 100%;
+}
+
+.form.profile__form{
+  margin-top: 2.5rem;
+  width: 300%;
+}
+.authors__container{
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+}
+
+.dashboard__post {
+  flex-direction: column;
+}
+
+.dashboard__post-info{
+  gap: 1.5rem;
+}
+
+.dashboard__post-thumbnail{
+  width: 5rem;
+}
+
 }

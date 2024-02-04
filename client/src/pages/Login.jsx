@@ -24,7 +24,7 @@ const changeInputHandler = (e)=>{
     <h2>Sign In</h2>
     <form  className="form login__form">
       <p className="form__error-message">This is an error message</p>
-      <input type='text' placeholder='Email' name='email' value={userData.email} onChange={changeInputHandler}/>
+      <input type='text' placeholder='Email' name='email' value={userData.email} onChange={changeInputHandler} autoFocus/>
       <input type='password' placeholder='Confirm password' name='password2' value={userData.password2} onChange={changeInputHandler}/>
       <button type='submit' className='btn primary'>Login</button>
 
