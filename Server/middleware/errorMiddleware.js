@@ -5,3 +5,13 @@ const notFound = (req,res,next) =>{
     res.status(404);
     next(error);
 };
+
+const errorHandler = (error , req , res , next) =>{
+    if(res.headersent) {
+        return next(error)
+    }
+
+    res.status(error.code || 500).json({message: error.message || "An unknow error occured "})
+}
+
+module.exports = {notFound,errorHandler}
